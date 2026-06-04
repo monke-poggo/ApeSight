@@ -55,6 +55,13 @@ No build step, it's all vanilla JS. After making changes just go to `chrome://ex
 To debug:
 - Background: click "service worker" on the extensions page
 - Popup: right-click extension icon → Inspect popup
+## Custom Icons
+
+There's also a small vibe-coded tool called `generate-icons.html` included in the project.
+
+The idea is simple: if you don't like the default icon, you can generate your own and customize it however you want. Open the file in your browser, make a few tweaks, generate the icons, and drop them into the `icons/` folder.
+
+Nothing fancy, just a quick little tool made to let people personalize ApeSight without having to mess around with image editors or design software.
 
 ## Disclaimer / Responsible Use
 
