@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "ApeSight",
+  "version": "2.0.0",
+  "description": "ApeSight - Passive technology detection and real-time CVE mapping (OSV + GHSA).",
+  "author": "ApeSight",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "ApeSight",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "webRequest",
+    "webNavigation",
+    "cookies",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://api.osv.dev/*",
+    "https://api.github.com/*",
+    "https://cdn.simpleicons.org/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

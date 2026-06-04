@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>ApeSight</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <img src="../icons/icon48.png" alt="ApeSight" width="34" height="34">
+      </div>
+      <div>
+        <h1>ApeSight</h1>
+        <p class="subtitle" id="currentHost">Loading...</p>
+      </div>
+    </div>
+    <button class="icon-btn" id="rescanBtn" title="Rescan" aria-label="Rescan">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="23 4 23 10 17 10"></polyline>
+        <path d="M20.49 15A9 9 0 1 1 5.64 5.64L23 10"></path>
+      </svg>
+    </button>
+  </header>
+
+  <section class="stats">
+    <div class="stat">
+      <div class="stat-value" id="techCount">0</div>
+      <div class="stat-label">Technos</div>
+    </div>
+    <div class="stat stat-warning" id="cveStat">
+      <div class="stat-value" id="cveCount">0</div>
+      <div class="stat-label">CVE</div>
+    </div>
+    <div class="stat stat-critical" id="criticalStat">
+      <div class="stat-value" id="criticalCount">0</div>
+      <div class="stat-label">Critiques</div>
+    </div>
+  </section>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="techs">Technologies</button>
+    <button class="tab" data-tab="vulns">Vulnerabilities</button>
+    <button class="tab" data-tab="exploits">Exploits / PoC</button>
+  </div>
+
+  <main class="content">
+    <div class="tab-panel active" id="techs-panel">
+      <div id="techs-list" class="list"></div>
+      <div class="empty" id="techs-empty" hidden>
+        <span>No technologies detected on this page.</span>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="vulns-panel">
+      <div id="vulns-list" class="list"></div>
+      <div class="empty" id="vulns-empty" hidden>
+        <span>No known vulnerabilities for detected versions.</span>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="exploits-panel">
+      <div id="exploits-list" class="list"></div>
+      <div class="empty" id="exploits-empty" hidden>
+        <span>No exploits/PoC found for detected CVEs.</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>Sources: OSV + GHSA</span>
+    <div class="footer-actions">
+      <button class="link-btn link-btn-secondary" id="reportBtn">HTML Report</button>
+      <button class="link-btn" id="exportBtn">Export JSON</button>
+    </div>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
