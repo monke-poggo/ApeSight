@@ -18,9 +18,6 @@ It fingerprints whatever tech stack a website is running (frameworks, CMS, analy
 ## Install
 
 1. Clone the repo
-```bash
-git clone https://github.com/<your-username>/apesight.git
-```
 
 2. Go to `chrome://extensions/` in Chrome/Brave/Edge
 
@@ -28,7 +25,7 @@ git clone https://github.com/<your-username>/apesight.git
 
 4. Click **Load unpacked** → select the repo folder
 
-5. Done, the ApeSight icon should show up in your toolbar
+5. Done, the ApeSight icon should show up in your toolbar right after you pinned it 
 
 ## Permissions
 
